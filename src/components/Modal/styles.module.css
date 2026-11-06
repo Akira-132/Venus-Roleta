@@ -1,0 +1,18 @@
+.modal {
+  width: min(32rem, calc(100vw - var(--espaco-4)));
+  padding: var(--espaco-4);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-grande);
+  background-color: var(--card);
+  color: var(--texto);
+}
+
+.modal::backdrop {
+  background-color: var(--sobreposicao);
+}
+
+.title {
+  margin-bottom: var(--espaco-3);
+  color: var(--roxo);
+  font-size: var(--tamanho-medio);
+}

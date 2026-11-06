@@ -1,0 +1,31 @@
+{
+  "name": "venus-roleta",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "simular": "vite-node scripts/simular.ts"
+  },
+  "dependencies": {
+    "@fontsource/plus-jakarta-sans": "5.2.8",
+    "@fontsource/poppins": "5.2.7",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.30.4",
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.31",
+    "@types/react-dom": "18.3.7",
+    "@types/three": "0.170.0",
+    "@vitejs/plugin-react": "4.7.0",
+    "typescript": "5.9.3",
+    "vite": "5.4.21",
+    "vite-node": "2.1.9",
+    "vitest": "2.1.9"
+  }
+}

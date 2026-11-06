@@ -1,0 +1,102 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-4);
+  padding: var(--espaco-4);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-grande);
+  background-color: var(--card);
+  animation: revelar 280ms ease-out;
+}
+
+.especial {
+  border: var(--foco-largura) solid var(--destaque-veninha);
+  animation: festejar 900ms ease-out;
+}
+
+.anel {
+  position: relative;
+  flex: none;
+  width: var(--tamanho-anel);
+  height: var(--tamanho-anel);
+}
+
+.anel svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.trilha,
+.progresso {
+  fill: none;
+  stroke-width: 8;
+}
+
+.trilha {
+  stroke: var(--trilha);
+}
+
+.progresso {
+  stroke: var(--crimson);
+  stroke-linecap: round;
+  stroke-dasharray: 276.5;
+  animation: preencher 900ms ease-out;
+}
+
+.nota {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--roxo);
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-grande);
+}
+
+.rotulo {
+  color: var(--crimson);
+  font-family: var(--fonte-corpo);
+  font-size: var(--tamanho-pequeno);
+  font-weight: var(--peso-forte);
+}
+
+.nome {
+  color: var(--roxo);
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-enorme);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.instrucao {
+  margin-top: var(--espaco-2);
+  color: var(--texto-suave);
+  font-size: var(--tamanho-pequeno);
+}
+
+@keyframes preencher {
+  from {
+    stroke-dashoffset: 276.5;
+  }
+}
+
+@keyframes revelar {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+}
+
+@keyframes festejar {
+  0% {
+    transform: scale(0.9);
+  }
+  55% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

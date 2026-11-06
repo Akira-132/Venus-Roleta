@@ -1,0 +1,75 @@
+.veninha {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-3);
+}
+
+/* A boca é posicionada em % da cara, então a imagem não pode ter sobra de
+   letterbox: largura fixa e altura proporcional. */
+.rosto {
+  position: relative;
+  flex: none;
+  width: var(--tamanho-veninha);
+}
+
+.cara {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.boca {
+  position: absolute;
+  top: var(--boca-y);
+  left: var(--boca-x);
+  width: var(--boca-largura);
+  height: auto;
+  transform: translate(-50%, -50%) rotate(var(--boca-giro, 0deg));
+}
+
+.feliz .aberta {
+  --boca-x: 44.3%;
+  --boca-y: 58.13%;
+  --boca-largura: 6.8%;
+}
+
+.feliz .fechada {
+  --boca-x: 44.3%;
+  --boca-y: 56%;
+  --boca-largura: 8%;
+}
+
+.confusa .aberta {
+  --boca-x: 50%;
+  --boca-y: 57.67%;
+  --boca-largura: 10.42%;
+}
+
+.confusa .fechada {
+  --boca-x: 50%;
+  --boca-y: 57.67%;
+  --boca-largura: 10.42%;
+  --boca-giro: 17deg;
+}
+
+.pensando .aberta {
+  --boca-x: 54.07%;
+  --boca-y: 59.63%;
+  --boca-largura: 5.81%;
+}
+
+.pensando .fechada {
+  --boca-x: 54.07%;
+  --boca-y: 59.63%;
+  --boca-largura: 4.65%;
+}
+
+.balao {
+  flex: 1;
+  padding: var(--espaco-3);
+  border-radius: var(--raio-grande);
+  background-color: var(--lavanda-media);
+  color: var(--violeta-escuro);
+  font-size: var(--tamanho-base);
+  line-height: 1.4;
+}

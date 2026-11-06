@@ -1,0 +1,92 @@
+:root {
+  --roxo: #321b5d;
+  --violeta: #580ba5;
+  --lavanda: #cdb6e4;
+  --crimson: #a1145f;
+  --crimson-escuro: #3e0825;
+  --violeta-escuro: #1a0a2e;
+  --faixa-lilas: #f8f4fe;
+
+  --fundo: #ffffff;
+  --card: #ffffff;
+  --borda: #e1d3ef;
+  --texto: var(--violeta-escuro);
+  --texto-suave: #544c63;
+
+  --warning: #7a4708;
+  --warning-fundo: #fbeed6;
+  --avoid: #a1145f;
+  --avoid-fundo: #fce7f0;
+
+  --fonte-titulo: "Poppins", "Segoe UI", sans-serif;
+  --fonte-corpo: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+
+  --peso-titulo: 400;
+  --peso-forte: 600;
+
+  --tamanho-pequeno: clamp(0.8125rem, 0.79rem + 0.12vw, 0.875rem);
+  --tamanho-base: clamp(1rem, 0.97rem + 0.15vw, 1.125rem);
+  --tamanho-medio: clamp(1.125rem, 1.05rem + 0.38vw, 1.375rem);
+  --tamanho-grande: clamp(1.5rem, 1.29rem + 1.04vw, 2.125rem);
+  --tamanho-enorme: clamp(2rem, 1.58rem + 2.08vw, 3.25rem);
+  --tamanho-marca: clamp(6rem, 26vw, 30rem);
+
+  --espaco-1: 0.25rem;
+  --espaco-2: 0.5rem;
+  --espaco-3: 1rem;
+  --espaco-4: 1.5rem;
+  --espaco-5: 2.5rem;
+  --espaco-6: 4rem;
+
+  --raio-pequeno: 0.5rem;
+  --raio-medio: 0.75rem;
+  --raio-grande: 1rem;
+  --raio-pilula: 999px;
+
+  --foco-cor: var(--violeta);
+  --foco-largura: 3px;
+  --foco-offset: 2px;
+
+  --sobreposicao: rgb(26 10 46 / 0.6);
+  --lavanda-clara: #efe7f9;
+  --lavanda-media: #e7daf7;
+  --texto-invertido: #ffffff;
+  --borda-forte: #8b79a6;
+  --borda-largura: 2px;
+
+  --gradiente-primario: linear-gradient(
+    90deg,
+    var(--crimson),
+    var(--crimson-escuro)
+  );
+  --gradiente-marca: linear-gradient(90deg, var(--violeta), var(--crimson));
+  --trilha: #f2ecf8;
+
+  --estojo-laca: #321b5d;
+  --estojo-fundo: #1a0a2e;
+  --estojo-metal: #e3c48f;
+  --estojo-espelho: #b5aec2;
+  --estojo-reflexo: #f8f4fe;
+  --batom: #a1145f;
+
+  --sombra-cookies: #efc79c;
+  --sombra-cookies-texto: #3e0825;
+  --sombra-brownie: #6a3524;
+  --sombra-brownie-texto: #ffffff;
+  --sombra-botton: #cdb6e4;
+  --sombra-botton-texto: #1a0a2e;
+  --sombra-canetas: #a1145f;
+  --sombra-canetas-texto: #ffffff;
+  --sombra-espelho: #dbe0e7;
+  --sombra-espelho-texto: #1a0a2e;
+  --sombra-canecas: #580ba5;
+  --sombra-canecas-texto: #ffffff;
+  --sombra-veninha: #f2cf6b;
+  --sombra-veninha-texto: #321b5d;
+  --sombra-esgotado: #eeeff3;
+  --sombra-esgotado-texto: #4b4459;
+
+  --destaque-veninha: #f2cf6b;
+  --tamanho-veninha: 7rem;
+  --tamanho-anel: 6.5rem;
+}

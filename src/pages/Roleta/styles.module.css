@@ -1,0 +1,116 @@
+.pagina {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: var(--faixa-lilas);
+}
+
+.marca {
+  position: absolute;
+  right: 0;
+  bottom: -0.18em;
+  left: 0;
+  color: var(--lavanda-media);
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-marca);
+  line-height: 1;
+  text-align: center;
+  opacity: 0.55;
+  pointer-events: none;
+  user-select: none;
+}
+
+.estojo {
+  position: relative;
+  min-width: 0;
+  height: 55vh;
+}
+
+.lateral {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-4);
+  padding: var(--espaco-4) var(--espaco-3);
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-2);
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+}
+
+.nomeDaMarca {
+  color: var(--roxo);
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-grande);
+  letter-spacing: 0.06em;
+}
+
+.titulo {
+  color: var(--violeta-escuro);
+  font-size: var(--tamanho-enorme);
+  letter-spacing: -0.02em;
+}
+
+.destaque {
+  color: var(--violeta);
+}
+
+.erro {
+  padding: var(--espaco-3);
+  border-radius: var(--raio-medio);
+  background-color: var(--avoid-fundo);
+  color: var(--avoid);
+}
+
+.girar {
+  width: 100%;
+  min-height: 4.5rem;
+  margin-top: auto;
+  font-size: var(--tamanho-medio);
+}
+
+.estadoCheio {
+  display: grid;
+  place-content: center;
+  gap: var(--espaco-3);
+  min-height: 100vh;
+  padding: var(--espaco-4);
+  background-color: var(--faixa-lilas);
+  text-align: center;
+}
+
+@media (min-width: 64rem) {
+  .pagina {
+    grid-template-columns: minmax(0, 1.55fr) minmax(24rem, 1fr);
+    height: 100vh;
+  }
+
+  .estojo {
+    height: 100vh;
+  }
+
+  .lateral {
+    justify-content: center;
+    padding: var(--espaco-5);
+    overflow-y: auto;
+  }
+
+  .cabecalho {
+    position: absolute;
+    top: var(--espaco-4);
+    right: var(--espaco-5);
+  }
+
+  .girar {
+    margin-top: 0;
+  }
+}

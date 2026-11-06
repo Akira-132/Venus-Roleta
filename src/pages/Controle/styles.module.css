@@ -1,0 +1,226 @@
+.pagina {
+  min-height: 100vh;
+  background-color: var(--fundo);
+}
+
+.cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espaco-2) var(--espaco-3);
+  padding: var(--espaco-3) var(--espaco-4);
+  border-bottom: 1px solid var(--borda);
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+}
+
+.marca {
+  color: var(--roxo);
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-grande);
+  letter-spacing: 0.06em;
+}
+
+.selo {
+  padding: var(--espaco-1) var(--espaco-3);
+  border-radius: var(--raio-pilula);
+  background-color: var(--lavanda-media);
+  color: var(--roxo);
+  font-size: var(--tamanho-pequeno);
+}
+
+.abrir {
+  margin-left: auto;
+  color: var(--violeta);
+  font-weight: var(--peso-forte);
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-4);
+  max-width: 88rem;
+  margin: 0 auto;
+  padding: var(--espaco-4);
+}
+
+.titulo {
+  color: var(--roxo);
+  font-size: var(--tamanho-grande);
+}
+
+.subtitulo {
+  margin-bottom: var(--espaco-3);
+  color: var(--roxo);
+  font-size: var(--tamanho-medio);
+}
+
+.bloco {
+  padding: var(--espaco-4);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-grande);
+  background-color: var(--card);
+}
+
+.metricas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: var(--espaco-3);
+  margin-bottom: var(--espaco-4);
+}
+
+.metricas dt {
+  color: var(--texto-suave);
+  font-size: var(--tamanho-pequeno);
+}
+
+.metricas dd {
+  color: var(--violeta-escuro);
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-grande);
+  line-height: 1.2;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-2);
+  margin-top: var(--espaco-3);
+}
+
+.ritmo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--espaco-2);
+  margin-top: var(--espaco-4);
+  padding-top: var(--espaco-4);
+  border-top: 1px solid var(--borda);
+}
+
+.opcao {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-2);
+  font-weight: var(--peso-forte);
+}
+
+.opcao input {
+  width: var(--espaco-4);
+  height: var(--espaco-4);
+  accent-color: var(--violeta);
+}
+
+.ajuda {
+  max-width: 65ch;
+  color: var(--texto-suave);
+  font-size: var(--tamanho-pequeno);
+}
+
+.tabelaRolavel {
+  overflow-x: auto;
+}
+
+.tabela {
+  width: 100%;
+  min-width: 56rem;
+  border-collapse: collapse;
+}
+
+.tabela th,
+.tabela td {
+  padding: var(--espaco-2) var(--espaco-3);
+  border-bottom: 1px solid var(--borda);
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabela thead th {
+  color: var(--texto-suave);
+  font-size: var(--tamanho-pequeno);
+  font-weight: var(--peso-forte);
+}
+
+.tabela tbody th {
+  color: var(--roxo);
+  font-family: var(--fonte-titulo);
+  font-weight: var(--peso-titulo);
+}
+
+.acoesDaLinha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-2);
+}
+
+.acoesDaLinha button {
+  padding: var(--espaco-1) var(--espaco-3);
+  font-size: var(--tamanho-pequeno);
+}
+
+.historico li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-3);
+  padding: var(--espaco-2) 0;
+  border-bottom: 1px solid var(--borda);
+  font-variant-numeric: tabular-nums;
+}
+
+.forcado {
+  padding: 0 var(--espaco-2);
+  border-radius: var(--raio-pilula);
+  background-color: var(--warning-fundo);
+  color: var(--warning);
+  font-size: var(--tamanho-pequeno);
+  font-weight: var(--peso-forte);
+}
+
+.erro,
+.alerta,
+.aviso {
+  padding: var(--espaco-3);
+  border-radius: var(--raio-medio);
+}
+
+.erro {
+  background-color: var(--avoid-fundo);
+  color: var(--avoid);
+  font-weight: var(--peso-forte);
+}
+
+.alerta {
+  background-color: var(--warning-fundo);
+  color: var(--warning);
+  font-weight: var(--peso-forte);
+}
+
+.aviso {
+  background-color: var(--lavanda-clara);
+  color: var(--violeta-escuro);
+  font-weight: var(--peso-forte);
+}
+
+.textoDoDialogo {
+  margin-bottom: var(--espaco-4);
+}
+
+.acoesDoDialogo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--espaco-2);
+}
+
+.estadoCheio {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--espaco-3);
+  min-height: 100vh;
+  padding: var(--espaco-4);
+  text-align: center;
+}
