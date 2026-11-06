@@ -3,6 +3,7 @@ import type { PrizeId } from "../../types/evento";
 export const LINHAS_DA_FATIA: Record<PrizeId, string[]> = {
   cookies: ["Cookies"],
   brownie: ["Brownie"],
+  sequilhos: ["Sequilhos"],
   botton: ["Botton"],
   canetas: ["Canetas"],
   espelho: ["Espelho"],

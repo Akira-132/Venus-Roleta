@@ -15,12 +15,10 @@ const INICIO = 0;
 interface Cenario {
   nome: string;
   intervaloDeChegada: (segundos: number) => number;
-  cookiesExtras?: number;
 }
 
 const CENARIOS: Cenario[] = [
   { nome: "1 pessoa a cada 50s", intervaloDeChegada: () => 50 },
-  { nome: "1 pessoa a cada 50s, com 42 brindes extras", intervaloDeChegada: () => 50, cookiesExtras: 42 },
   { nome: "1 pessoa a cada 55s", intervaloDeChegada: () => 55 },
   { nome: "1 pessoa a cada 40s", intervaloDeChegada: () => 40 },
   { nome: "1 pessoa a cada 60s", intervaloDeChegada: () => 60 },
@@ -39,11 +37,6 @@ function proximaChegada(media: number): number {
 
 function simularEvento(cenario: Cenario) {
   const evento: EventState = { ...criarEvento(), startedAt: INICIO };
-  evento.prizes = evento.prizes.map((brinde) =>
-    brinde.id === "cookies"
-      ? { ...brinde, total: brinde.total + (cenario.cookiesExtras ?? 0) }
-      : brinde,
-  );
   let chegada = 0;
   const chegadas: number[] = [];
 
@@ -137,7 +130,7 @@ for (const cenario of CENARIOS) {
   console.log(`  maior espera (média dos eventos): ${formatar(media(resultados.map((r) => r.maiorEspera)) / 60)} min`);
   console.log(`  último giro: ${formatar(media(resultados.map((r) => r.ultimoGiro)), 2)} h`);
 
-  const nomes: PrizeId[] = ["cookies", "brownie", "botton", "canetas", "espelho", "canecas", "veninha"];
+  const nomes: PrizeId[] = criarEvento().prizes.map((brinde) => brinde.id);
   const sobras = nomes.map((id) => {
     const valor = media(resultados.map((r) => r.sobras.find((s) => s.id === id)?.resta ?? 0));
     return `${id} ${formatar(valor)}`;

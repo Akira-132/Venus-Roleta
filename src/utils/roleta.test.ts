@@ -6,7 +6,13 @@ describe("roleta", () => {
     expect(FATIAS.filter((f) => f === "veninha")).toHaveLength(1);
     expect(FATIAS.filter((f) => f === "canecas")).toHaveLength(1);
     expect(FATIAS.filter((f) => f === "espelho")).toHaveLength(1);
-    expect(new Set(FATIAS).size).toBe(7);
+    expect(new Set(FATIAS).size).toBe(8);
+  });
+
+  it("não deixa duas fatias iguais lado a lado", () => {
+    FATIAS.forEach((fatia, i) => {
+      expect(FATIAS[(i + 1) % FATIAS.length]).not.toBe(fatia);
+    });
   });
 
   it("sempre para na fatia sorteada, girando no sentido horário", () => {

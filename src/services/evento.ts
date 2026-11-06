@@ -2,6 +2,7 @@ import type { EventState, PrizeId, SpinRecord } from "../types/evento";
 import { escolherFatia } from "../utils/roleta";
 import {
   calcularChances,
+  criarBrindes,
   criarEvento,
   restantes,
   situacaoDoGiro,
@@ -54,7 +55,16 @@ function ler(): EventState {
     throw new Error("Formato inválido.");
   }
 
-  return dados;
+  return completarBrindes(dados);
+}
+
+// Um evento salvo antes de um brinde novo existir não teria esse brinde, e ele
+// nunca sairia na roleta. O que já estava salvo, inclusive ajustes, é mantido.
+function completarBrindes(evento: EventState): EventState {
+  const prizes = criarBrindes().map(
+    (padrao) => evento.prizes.find((brinde) => brinde.id === padrao.id) ?? padrao,
+  );
+  return { ...evento, prizes };
 }
 
 function gravar(evento: EventState): EventState {

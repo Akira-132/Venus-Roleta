@@ -1,6 +1,7 @@
 export type PrizeId =
   | "cookies"
   | "brownie"
+  | "sequilhos"
   | "botton"
   | "canetas"
   | "espelho"

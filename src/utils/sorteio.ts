@@ -18,6 +18,7 @@ export function criarBrindes(): Prize[] {
   return [
     { id: "cookies", name: "Cookies", total: 200, multiplier: 1, active: true, rare: false },
     { id: "brownie", name: "Brownie", total: 180, multiplier: 1, active: true, rare: false },
+    { id: "sequilhos", name: "Sequilhos", total: 130, multiplier: 1, active: true, rare: false },
     { id: "botton", name: "Botton", total: 100, multiplier: 1, active: true, rare: false },
     { id: "canetas", name: "Canetas", total: 100, multiplier: 1, active: true, rare: false },
     { id: "espelho", name: "Espelho", total: 20, multiplier: 1, active: true, rare: true },
@@ -127,6 +128,7 @@ export function calcularChances(
   const chances: Chances = {
     cookies: 0,
     brownie: 0,
+    sequilhos: 0,
     botton: 0,
     canetas: 0,
     espelho: 0,
