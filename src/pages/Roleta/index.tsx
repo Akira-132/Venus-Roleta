@@ -30,7 +30,6 @@ const FRASES_DO_RESULTADO: Record<PrizeId, string> = {
   cookies: "Saiu cookie! Agora é só pegar o seu.",
   brownie: "Saiu brownie! Agora é só pegar o seu.",
   sequilhos: "Saiu sequilho! Agora é só pegar o seu.",
-  botton: "Saiu botton! Já pode escolher onde vai usar.",
   canetas: "Saiu caneta! Boa para anotar o que tem no rótulo.",
   espelho: "Saiu espelho! Esse é dos difíceis.",
   canecas: "Saiu caneca! Só existem 5 na feira inteira.",

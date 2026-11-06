@@ -2,26 +2,23 @@ import type { PrizeId } from "../types/evento";
 
 // O tamanho da fatia é só visual: a chance real vem de calcularChances.
 // Comuns repetem perto da proporção do estoque, cerca de 40 brindes por fatia,
-// e raros aparecem uma vez cada, espaçados a cada 7 fatias.
+// e raros aparecem uma vez cada, espaçados a cada 6 fatias.
 export const FATIAS: PrizeId[] = [
   "cookies",
   "sequilhos",
   "brownie",
-  "botton",
   "cookies",
   "canetas",
   "espelho",
   "brownie",
   "sequilhos",
   "cookies",
-  "botton",
-  "brownie",
   "canetas",
+  "brownie",
   "canecas",
   "cookies",
   "sequilhos",
   "brownie",
-  "botton",
   "cookies",
   "canetas",
   "veninha",

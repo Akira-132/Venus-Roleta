@@ -46,13 +46,11 @@ function buscar(brindes: Prize[], id: PrizeId): Prize {
 }
 
 describe("calcularChances", () => {
-  it("no primeiro giro, raros contam com 648 giros, comuns dividem o resto e soma 100%", () => {
+  it("no primeiro giro é proporcional ao estoque e soma 100%", () => {
     const chances = calcularChances(iniciado(), aos(0));
-    const parteDosComuns = 1 - 26 / 648;
-    expect(chances.veninha).toBeCloseTo(1 / 648);
-    expect(chances.espelho).toBeCloseTo(20 / 648);
-    expect(chances.cookies).toBeCloseTo((200 / 710) * parteDosComuns);
-    expect(chances.sequilhos).toBeCloseTo((130 / 710) * parteDosComuns);
+    expect(chances.cookies).toBeCloseTo(200 / 636);
+    expect(chances.sequilhos).toBeCloseTo(130 / 636);
+    expect(chances.veninha).toBeCloseTo(1 / 636);
     const soma = Object.values(chances).reduce((a, b) => a + b, 0);
     expect(soma).toBeCloseTo(1);
   });
@@ -132,13 +130,13 @@ describe("ritmo", () => {
     expect(ritmoEstimado(evento)).toBe(300);
   });
 
-  it("o intervalo começa perto de 44s e diminui se o movimento cair", () => {
+  it("o intervalo começa perto de 51s e diminui se o movimento cair", () => {
     const evento = iniciado();
     evento.spins = [giro("cookies", 0)];
-    expect(segundosParaLiberar(evento, aos(0))).toBeCloseTo(32400 / 736);
+    expect(segundosParaLiberar(evento, aos(0))).toBeCloseTo(32400 / 636);
     const depois = iniciado();
     depois.spins = [giro("cookies", 3600)];
-    expect(segundosParaLiberar(depois, aos(3600))).toBeCloseTo(28800 / 736);
+    expect(segundosParaLiberar(depois, aos(3600))).toBeCloseTo(28800 / 636);
   });
 
   it("não trava com o controle desligado ou liberado à mão", () => {
@@ -172,12 +170,11 @@ describe("situacaoDoGiro", () => {
 });
 
 describe("preverBrinde", () => {
-  it("no plano padrão, os raros duram até o fim e só sobram comuns", () => {
+  it("no plano padrão, tudo dura até o fim", () => {
     const evento = iniciado();
     const chances = calcularChances(evento, aos(0));
     for (const brinde of evento.prizes) {
-      const previsao = preverBrinde(evento, brinde, chances[brinde.id], aos(0));
-      expect(previsao.kind).toBe(brinde.rare ? "lasts" : "leftover");
+      expect(preverBrinde(evento, brinde, chances[brinde.id], aos(0)).kind).toBe("lasts");
     }
   });
 

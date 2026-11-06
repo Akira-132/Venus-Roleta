@@ -58,8 +58,9 @@ function ler(): EventState {
   return completarBrindes(dados);
 }
 
-// Um evento salvo antes de um brinde novo existir não teria esse brinde, e ele
-// nunca sairia na roleta. O que já estava salvo, inclusive ajustes, é mantido.
+// Um evento salvo antes de a lista de brindes mudar teria brinde a menos (que
+// nunca sairia) ou a mais (que não existe na roleta). A lista padrão manda, e os
+// ajustes salvos dos brindes que continuam são mantidos.
 function completarBrindes(evento: EventState): EventState {
   const prizes = criarBrindes().map(
     (padrao) => evento.prizes.find((brinde) => brinde.id === padrao.id) ?? padrao,

@@ -6,7 +6,7 @@ describe("roleta", () => {
     expect(FATIAS.filter((f) => f === "veninha")).toHaveLength(1);
     expect(FATIAS.filter((f) => f === "canecas")).toHaveLength(1);
     expect(FATIAS.filter((f) => f === "espelho")).toHaveLength(1);
-    expect(new Set(FATIAS).size).toBe(8);
+    expect(new Set(FATIAS).size).toBe(7);
   });
 
   it("não deixa duas fatias iguais lado a lado", () => {
